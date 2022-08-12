@@ -4,28 +4,21 @@ const Fater = styled.div`
   display: flex;
 `;
 
-const Box1 = styled.div`
-  background-color: teal;
-  width: 100px;
-  height: 100px;
-`;
-const Box2 = styled.div`
-  background-color: tomato;
+const Box = styled.div`
+  background-color: ${(props) => props.bgColor};
   width: 100px;
   height: 100px;
 `;
 
-const Text = styled.span`
-  color: white;
+const Circle = styled(Box)`
+  border-radius: 50px;
 `;
 
 function App() {
   return (
     <Fater>
-      <Box1>
-        <Text>Hello</Text>
-      </Box1>
-      <Box2 />
+      <Box bgColor="teal" />
+      <Circle bgColor="tomato" />
     </Fater>
   );
 }
